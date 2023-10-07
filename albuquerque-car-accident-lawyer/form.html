@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Enquiry Form</title>
+    <style>
+      #radioForm {
+        background-color: #fcfcfc;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 40px;
+      }
+
+      #radioForm p {
+        font-size: 28px;
+        font-weight: 700;
+        /* line-height: 25px; */
+        color: #333;
+        padding-right: 8px;
+      }
+
+      .one .onea {
+        display: inline-block;
+      }
+
+      .onea {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 250px;
+        /* height: 50px; */
+        margin: 10px;
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+
+      input[type="radio"] {
+        font-size: 20px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .oneab {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 70%;
+        /* height: 50px; */
+        margin: 10px;
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+      .one .oneab {
+        display: inline-block;
+      }
+
+      input[type="button"] {
+        background-color: #25a85e;
+        min-width: 7rem;
+        width: 20%;
+        margin: 20px;
+        height: 44px;
+        border: gray;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        align-items: center;
+      }
+
+      #id0 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 70%;
+        height: 120px;
+        margin: 10px;
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+      #id1 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 400px;
+        height: 50px;
+        background-color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      #id2 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 400px;
+        height: 50px;
+        background-color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      #id3 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 400px;
+        height: 50px;
+        background-color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      #id4 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 500px;
+        height: 50px;
+        margin: 10px;
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+      #id5 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 300px;
+        height: 50px;
+        margin: 10px;
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+      #id6 {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        width: 300px;
+        height: 50px;
+        margin: 10px;
+
+        background-color: #ffffff;
+        font-size: 20px;
+      }
+      .one .oneabc {
+        display: inline-block;
+      }
+
+      @media screen and (max-width: 800px) {
+        .menu {
+          display: none;
+        }
+        .grid-container {
+          grid-template-columns: auto auto;
+        }
+        .onea {
+          width: 70%;
+        }
+        #id0 {
+          width: 70%;
+        }
+        #id1 {
+          width: 70%;
+        }
+        #id2 {
+          width: 70%;
+        }
+        #id3 {
+          width: 70%;
+        }
+        #id6 {
+          width: 70%;
+        }
+        #id6 {
+          width: 70%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+
+    <!--<div class="container">-->
+    <div class="d-flex justify-content-between" style="background: #912525">
+      <div>
+        <img
+          src="images/car-accident1.png"
+          alt="Car Accident Lawyer"
+          class="img-fluid cp"
+        />
+      </div>
+      <div class="menu">
+        <img src="images/car-accident2.png" alt="Menu" class="img-fluid cp" />
+      </div>
+    </div>
+    <!-- mid -->
+    <hr />
+    <!--Section 2-->
+    <div
+      class="container"
+      id="radioForm"
+      style="background-image: url(images/bg-pattern.jpg)"
+    >
+      <div id="question1">
+        <p>How long ago did the accident occur ?</p>
+        <div class="one">
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" Less than 1 Year"
+              required
+            />
+            Less than 1 Year
+          </div>
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" Less than 2 Year"
+            />
+            Less than 2 Year
+          </div>
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" Less than 3 Year"
+            />
+            Less than 3 Year
+          </div>
+        </div>
+        <div class="one">
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" Less than 4 Year"
+            />
+            Less than 4 Year
+          </div>
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" Less than 5 Year"
+            />
+            Less than 5 Year
+          </div>
+          <div class="onea">
+            <input
+              type="radio"
+              name="options1"
+              class="classname3"
+              value=" 5 or More Years"
+            />
+            5 or More Years
+          </div>
+        </div>
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="showQuestion('question2')"
+        />
+      </div>
+
+      <div id="question2" style="display: none">
+        <p>Did you receive medical treatment for your injury?</p>
+        <div class="one">
+          <div class="oneab">
+            <input
+              type="radio"
+              name="options2"
+              id="id7"
+              class="classname3"
+              value="Yes"
+              required
+            />
+            Yes<br />
+          </div>
+          <div class="oneab">
+            <input
+              type="radio"
+              name="options2"
+              id="id9"
+              class="classname3"
+              value="no"
+            />
+            No<br />
+          </div>
+        </div>
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="showQuestion('question3')"
+        />
+      </div>
+
+      <div id="question3" style="display: none">
+        <p>Were you at fault ?</p>
+        <!-- <div class="one"> -->
+        <div class="oneab">
+          <input
+            type="radio"
+            name="options3"
+            class="classname3"
+            value="Yes, I was cited or caused the accident"
+            required
+          />
+          Yes, I was cited or caused the acciden
+        </div>
+        <div class="oneab">
+          <input type="radio" name="options3" class="classname3" value="No" />
+          No<br />
+        </div>
+
+        <!-- </div> -->
+        <!-- <div class="one"> -->
+        <div class="oneab">
+          <input type="radio" name="options3" class="classname3" value="Yes" />
+          Yes<br />
+        </div>
+        <div class="oneab">
+          <input
+            type="radio"
+            name="options3"
+            class="classname3"
+            value="Yes, but it was the result of a tree, animal, or other act of nature"
+          />
+          Yes, but it was the result of a tree, animal, or other act of
+          nature<br />
+        </div>
+        <!-- </div> -->
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="showQuestion('question4')"
+        />
+      </div>
+
+      <div id="question4" style="display: none">
+        <p>
+          Have you already signed up with a law firm to help you with this case?
+        </p>
+        <div class="one">
+          <div class="oneab">
+            <input
+              type="radio"
+              name="options4"
+              class="classname3"
+              value="Yes"
+              required
+            />
+            Yes<br />
+          </div>
+          <div class="oneab">
+            <input type="radio" name="options4" class="classname3" value="No" />
+            No<br />
+          </div>
+        </div>
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="showQuestion('question5')"
+        />
+      </div>
+
+      <div id="question5" style="display: none">
+        <p>What was your primary injury?</p>
+        <div class="one">
+          <div class="oneab">
+            <input
+              type="radio"
+              name="options5"
+              class="classname3"
+              value="Back or Neck Pain"
+              required
+            />
+            Back or Neck Pain<br />
+          </div>
+          <div class="oneab">
+            <input
+              type="radio"
+              name="options5"
+              class="classname3"
+              value=" Broken Bones"
+            />
+            Broke and Bones<br />
+          </div>
+          <div class="one">
+            <div class="oneab">
+              <input
+                type="radio"
+                name="options5"
+                class="classname3"
+                value="Cuts and Bruises"
+              />
+              Cuts and Bruises<br />
+            </div>
+            <div class="oneab">
+              <input
+                type="radio"
+                name="options5"
+                class="classname3"
+                value=" Other"
+              />
+              Other<br />
+            </div>
+          </div>
+          <input
+            type="button"
+            value="Next &#8594;"
+            onclick="showQuestion('question6')"
+          />
+        </div>
+      </div>
+
+      <div id="question6" style="display: none">
+        <p>Briefly describe your case</p>
+        <input
+          type="text"
+          name="options6"
+          id="id0"
+          class="classname4"
+          placeholder="Type Here......"
+          required
+        /><br />
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="textquestion('question7')"
+        />
+      </div>
+      <div id="question7" style="display: none">
+        <p>Fill The Following Details</p>
+        <label
+          for="Phn"
+          style="
+            font-size: 20px;
+            color: black;
+            padding-right: 10px;
+            margin-top: 20px;
+          "
+          >Enter Your State Name: </label
+        ><br />
+        <input
+          type="text"
+          name="options7"
+          id="id1"
+          class="classname4"
+          placeholder="Enter Your state name"
+          required
+        /><br />
+
+        <label
+          for="Phn"
+          style="font-size: 20px; color: black; padding-right: 18px"
+          >Enter Your City Name:</label
+        ><br />
+        <input
+          type="text"
+          name="options8"
+          id="id2"
+          class="classname4"
+          placeholder="Enter Your City name"
+          required
+        /><br />
+
+        <label
+          for="Phn"
+          style="font-size: 20px; color: black; padding-right: 79px"
+          >Your Zip Code: </label
+        ><br />
+        <input
+          type="text"
+          name="options9"
+          id="id3"
+          class="classname4"
+          placeholder="Your Zip Code"
+          required
+        />
+
+        <span id="numberText" class="reqError"></span><br />
+        <input type="button" value="Next &#8594;" onclick="dell('question8')" />
+      </div>
+
+      <div id="question8" style="display: none">
+        <p>What is your Full name??</p>
+        <input
+          type="text"
+          name="options10"
+          id="id4"
+          class="classname4"
+          placeholder="Your Full name"
+          required
+        /><br />
+        <input
+          type="button"
+          value="Next &#8594;"
+          onclick="textquestion('question9')"
+        />
+      </div>
+
+      <div id="question9" style="display: none">
+        <p>What is your email and Your Contact Number?</p>
+        <div class="one">
+          <div class="oneabc">
+            <input
+              type="email"
+              name="options12"
+              class="classname4"
+              id="id5"
+              placeholder="Your email"
+              required
+            />
+            <span id="emailText" class="reqError"></span><br />
+          </div>
+          <div class="oneabc">
+            <input
+              type="text"
+              name="options13"
+              class="classname4"
+              id="id6"
+              placeholder=" Your Contact Number"
+              required
+            />
+            <span id="numberText" class="reqError"></span>
+          </div>
+
+          <div class="oneabc">
+            <input
+              type="checkbox"
+              id="id7"
+              name="options14"
+              class="classnam5"
+              value="agree"
+            />
+            I agree to be contacted by, or on behalf of,
+            personalinjuries-attorney.com at the email address and/or phone
+            number provided, including for marketing purposes, via live,
+            automated or pre-recorded telephone call, text message, or email.
+            Consent is not a condition of purchasing goods or services. Msg &
+            data rates may apply. I also agree to personalinjuries-attorney.com
+            Privacy Policy, Disclaimer and Terms of Use.<br />
+            <span id="agreeText" class="reqError" style="color: red"></span
+            ><br />
+          </div>
+        </div>
+        <input
+          type="button"
+          id="c"
+          value="Finish"
+          onclick="dell2('question10')"
+        />
+      </div>
+
+      <div id="question10" style="display: none">
+        <h1 style="text-align: center">
+          Thank you for filling out the form. we will contact you soon...
+        </h1>
+      </div>
+    </div>
+
+    <!--</div>-->
+
+    <hr />
+
+    <script src="https://barenot.com/imglayout/layout-2/Js/Script.js"></script>
+  </body>
+</html>
